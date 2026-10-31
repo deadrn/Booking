@@ -1,0 +1,13 @@
+{% extends 'base.html' %}  
+{% block content %}
+<h2>Наші кімнати</h2>
+    
+        {% for room in rooms %}
+        <img src="{{ room.image.url }}">
+            <h3>Room №{{ room.number }} - {{ room.category.title }} - {{ room.price }}</h3>
+            <p>Місць: {{ room.capacity }}</p>
+            <p>Ціна: {{ room.price }} грн</p>
+        {% endfor %}
+    
+{% endfor %}
+{% endblock %}
